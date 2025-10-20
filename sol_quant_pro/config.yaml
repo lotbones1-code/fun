@@ -1,0 +1,41 @@
+exchange:
+  name: binance
+  testnet: true
+
+market:
+  symbol: "SOL/USDT"
+  timeframe: "5m"
+  since_days: 30
+
+fees:
+  taker: 0.0006
+  maker: 0.0002
+
+slippage:
+  ticks: 1
+
+risk:
+  account_equity: 10000.0
+  risk_per_trade: 0.01
+  max_daily_loss_pct: 0.03
+  kelly_cap: 0.25
+
+strategy:
+  use_ai: true
+  ai_model: "xgboost"
+  horizon_bars: 6
+  cls_threshold: 0.55
+  reg_threshold: 0.0008
+  ema_fast: 50
+  ema_slow: 200
+  rsi_period: 14
+  bb_window: 20
+  bb_std: 2.0
+  atr_period: 14
+  atr_mult_stop: 2.0
+  atr_mult_tp: 2.5
+
+live:
+  trading: false
+  poll_seconds: 15
+  max_candles: 1000
